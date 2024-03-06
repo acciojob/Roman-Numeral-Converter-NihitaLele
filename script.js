@@ -20,6 +20,9 @@ function convertToRoman(num) {
             num -= value;
         }
 
+        // Convert key to number for arithmetic operations
+        key = parseInt(key);
+
         // Check for subtractive notation
         if (key < 6 && num >= obj[key][1] - obj[key + 2][1] && obj[key + 2][1] !== 1000) {
             romanNumeral += obj[key + 2][0] + obj[key][0];
